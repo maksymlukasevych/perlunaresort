@@ -1,0 +1,16 @@
+  <div class="rooms-page">
+    <h1>Номери:</h1>
+   <div class="container-fluid">
+    <div class="row">
+      
+       <div class="col-sm-4" ng-repeat="room in rooms">
+        <a href="#/rooms/{{room.id}}" class="thumb"><img ng-src="{{room.imageUrl}}"></a>
+          <h4>{{room.name}}</h4> 
+         <p>{{room.text}}</p>
+       </div>
+        
+</div>
+</div>
+  </div>
+
+  

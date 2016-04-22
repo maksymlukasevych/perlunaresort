@@ -11,33 +11,120 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+ <!-- <link rel="shortcut icon" href="logo/favicon.ico" type="image/x-icon"> -->
+  <link href="logo/fav.ico" rel="shortcut icon">
   <link rel="stylesheet" href="app.css">
-  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+  <link rel="stylesheet" href="slider.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  
+
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+<link rel="stylesheet" href="gallery/css/bootstrap-image-gallery.min.css"> 
+
 </head>
 <body>
-  <ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
-  </ul>
+  
 
-  <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
+<div class="main">
+ <div class="top-line"></div>
+<a id="touch-menu" class="mobile-menu" href="#"><i class="icon-reorder"></i><img src="logo/menu-icon.png" height="220" width="220" alt=""></a> 
 
-  <div ng-view></div>
+    <div class="logo">
+        <a href="#/home"> <img  src="logo/s.jpg"></a>
+    </div>
+        
+ <!--NAVBAR -->
+    
+    <nav>
+      <ul class="menu">
+      <li><a href="#/home">Головна</a></li>
+      <li><a href="#/rooms">Номери</a></li>
+      <li><a  href="#/price">Ціни</a></li>
+      <li><a  href="#/gallery">Галерея</a></li>
+      <li><a  href="#/treatment">Лікування</a></li>
+      <li><a  href="#/contacts">Контакти</a></li>
+    </ul>
+  </nav>
+   <!--SLIDER-->
 
-  <div>Angular seed app: v<span app-version></span></div>
+<div ng-view>
 
-  <!-- In production use:
+
+</div>
+ <!--Footer-->
+<div class="footer">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="center-row">
+       <div class="col-sm-4">
+        <h2>Про Санаторій</h2>
+        <p>Перша письмова згадка про Моршин датована 2 січня 1482 р. в судовому записі, де згадувалось, що село Моршин належало шляхтичу Юрію (Юхну) Нагваздану та входило до складу Польського королівства. На той час це було невеличке село, котре налічувало 12 дворів. Однак вже в ті часи селяни в Моршині використовували джерела ропи для виварювання солі. </p>
+       </div>
+     <div class="col-sm-4">
+      <h2>Контакти:</h2>
+      <p><strong>Адреса:</strong> м. Моршин, вул. Перемоги 11</p>
+      <strong><p>Моб. тел.:</p></strong>
+      <p>+38 (033) 333-22-11;</p>
+      <p>+38 (033) 333-22-11</p>
+      <strong><p>Viber:</p></strong>
+      <p>+38 (033) 333-22-11</p>
+      <p><strong>Email:</strong> perlunamorshyn@gmail.com</p>
+     </div>
+    <div class="col-sm-4 soc">
+     <h2>Також ми є у:</h2>
+      <ul class="soc-icons">
+
+        <li><a href=""><img src="socials/z.png" height="64" width="64"  alt""></a></li>
+        <li>
+          <a href="">
+            <img src="socials/fb.png" width="64"   height="64"  alt""></a>    </li>
+
+            <li> <a href=""><img src="socials/g.png" width="64" class="grow" height="64" alt""></a></li>
+
+
+          </ul>
+
+    </div>
+      </div>
+    </div>
+  </div>
+  <div class="under-footer"><a href="#"><p>Розроблено JFstudio</p></a></div>
+</div>
+
+</div>
+ 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+<script src="gallery/js/bootstrap-image-gallery.min.js"></script>
+   
+
+   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
+
+  <script src="js/controllers.js"></script>
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="menu.js"></script>
+  <script src="slider.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="app.js"></script>
-  <script src="view1/view1.js"></script>
-  <script src="view2/view2.js"></script>
+  <script src="home/home.js"></script>
+  <script src="rooms/rooms.js"></script>
+  <script src="price/price.js"></script>
+  <script src="gallery/gallery.js"></script>
+  <script src="treatment/treatment.js"></script>
+  <script src="contacts/contacts.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
+    <script>
+var slider = new IdealImageSlider.Slider('#slider');
+slider.start();
+</script>
 </body>
 </html>
